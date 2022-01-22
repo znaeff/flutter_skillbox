@@ -32,8 +32,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   late VideoPlayerController _videoPlayerController;
-  late Duration _position;
-  String _duration = '';
+  Duration _position = const Duration();
 
   @override
   void initState() {
@@ -42,18 +41,16 @@ class _MyHomePageState extends State<MyHomePage> {
       'https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4',
     );
     _videoPlayerController.addListener(() {
-      setState(() {
-        _position = _videoPlayerController.value.position;
-      });
+      if (_videoPlayerController.value.position.inSeconds !=
+          _position.inSeconds) {
+        setState(() {
+          _position = _videoPlayerController.value.position;
+        });
+      }
     });
     _videoPlayerController.setLooping(true);
     _videoPlayerController.initialize().then((value) => setState(() {
           _position = _videoPlayerController.value.position;
-          _duration = _videoPlayerController.value.duration
-              .toString()
-              .split('.')
-              .first
-              .padLeft(8, "0");
         }));
     _videoPlayerController.play();
   }
@@ -95,7 +92,11 @@ class _MyHomePageState extends State<MyHomePage> {
                         },
                       ),
                     ),
-                    Text(_duration),
+                    Text(_videoPlayerController.value.duration
+                        .toString()
+                        .split('.')
+                        .first
+                        .padLeft(8, "0")),
                   ],
                 ),
               ),
