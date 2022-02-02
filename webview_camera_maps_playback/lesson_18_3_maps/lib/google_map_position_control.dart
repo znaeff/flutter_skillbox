@@ -184,7 +184,7 @@ class _GoogleMapPositionControlState extends State<GoogleMapPositionControl> {
             ),
             Slider(
                 min: 1.0,
-                max: 20.0,
+                max: 25.0,
                 label: zoomLevel.round().toString(),
                 //divisions: 20,
                 value: zoomLevel,
