@@ -1,0 +1,62 @@
+[
+  {
+    "firstname": "Alex",
+    "lastname": "Black",
+    "email": "example1@mail.ru",
+    "photo": "male.png"
+  },
+  {
+    "firstname": "Viktor",
+    "lastname": "White",
+    "email": "example1@mail.ru",
+    "photo": "male.png"
+  },
+  {
+    "firstname": "Fiona",
+    "lastname": "Magento",
+    "email": "example1@mail.ru",
+    "photo": "female.png"
+  },
+  {
+    "firstname": "Pavel",
+    "lastname": "Brown",
+    "email": "example1@mail.ru",
+    "photo": "male.png"
+  },
+  {
+    "firstname": "Anna",
+    "lastname": "Cyan",
+    "email": "example1@mail.ru",
+    "photo": "female.png"
+  },
+  {
+    "firstname": "Peter",
+    "lastname": "Yellow",
+    "email": "example1@mail.ru",
+    "photo": "male.png"
+  },
+  {
+    "firstname": "Venera",
+    "lastname": "Green",
+    "email": "example1@mail.ru",
+    "photo": "female.png"
+  },
+  {
+    "firstname": "Elena",
+    "lastname": "Gray",
+    "email": "example1@mail.ru",
+    "photo": "female.png"
+  },
+  {
+    "firstname": "Vladimir",
+    "lastname": "Red",
+    "email": "example1@mail.ru",
+    "photo": "male.png"
+  },
+  {
+    "firstname": "Viktoria",
+    "lastname": "Rainbow",
+    "email": "example1@mail.ru",
+    "photo": "female.png"
+  }
+]
