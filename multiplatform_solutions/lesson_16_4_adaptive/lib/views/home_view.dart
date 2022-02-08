@@ -1,9 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-//import 'package:popover/popover.dart';
+import 'package:popover/popover.dart';
 import '../models/assets_data_json.dart';
 import '../models/person.dart';
 import 'person_card.dart';
+
+const List<String> popItems = ['Change email', 'Change photo'];
 
 class HomeView extends StatefulWidget {
   const HomeView({Key? key, required this.title}) : super(key: key);
@@ -19,9 +21,10 @@ class _HomeViewState extends State<HomeView> {
   bool isError = false;
   String? errorText;
 
-  static const List<String> popItems = ['Change email', 'Change photo'];
   static const int widthWide = 720;
   static const int widthWideExtra = 900;
+  static const int gridFlexLeft = 1;
+  static const int gridFlexRight = 4;
 
   List<Person>? _personsList;
 
@@ -58,12 +61,34 @@ class _HomeViewState extends State<HomeView> {
     getData();
   }
 
+  int getGridCrossAxisCount(double width) => width >= widthWideExtra ? 3 : 2;
+
+  double getGridChildAspectRatio(double width, int crossAxisCount) {
+    double flexRatio = gridFlexRight / (gridFlexLeft + gridFlexRight);
+    double widthReal = (width / crossAxisCount) * flexRatio;
+    double widthMin = PersonCard.myPhotoSizeBig * 2;
+
+    if (widthReal <= widthMin) {
+      return 1.0;
+    } else {
+      return widthReal / widthMin;
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
+    int myGridCrossAxisCount;
+    double myGridChildAspectRatio;
+
     return LayoutBuilder(
       builder: (BuildContext context, BoxConstraints constraints) {
+        double myWidth = constraints.constrainWidth();
+        myGridCrossAxisCount = getGridCrossAxisCount(myWidth);
+        myGridChildAspectRatio =
+            getGridChildAspectRatio(myWidth, myGridCrossAxisCount);
+
         return Scaffold(
-          appBar: constraints.constrainWidth() >= widthWide
+          appBar: myWidth >= widthWide
               ? null
               : AppBar(
                   title: Text(widget.title),
@@ -73,12 +98,12 @@ class _HomeViewState extends State<HomeView> {
                   ? const Center(child: CircularProgressIndicator())
                   : isError
                       ? Center(child: Text('$errorText'))
-                      : constraints.constrainWidth() >= widthWide
+                      : myWidth >= widthWide
                           ? Row(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Expanded(
-                                  flex: 1,
+                                  flex: gridFlexLeft,
                                   child: Container(
                                     constraints:
                                         const BoxConstraints(minHeight: 1024),
@@ -98,70 +123,20 @@ class _HomeViewState extends State<HomeView> {
                                   ),
                                 ),
                                 Expanded(
-                                  flex: 4,
+                                  flex: gridFlexRight,
                                   child: GridView.builder(
                                     gridDelegate:
                                         SliverGridDelegateWithFixedCrossAxisCount(
-                                      crossAxisCount:
-                                          constraints.constrainWidth() >=
-                                                  widthWideExtra
-                                              ? 3
-                                              : 2,
-                                      childAspectRatio: 1.1,
+                                      crossAxisCount: myGridCrossAxisCount,
+                                      childAspectRatio: myGridChildAspectRatio,
                                     ),
                                     itemCount: _personsList!.length,
-                                    itemBuilder: (context, index) =>
-                                        GestureDetector(
-                                      onTap: () {
-                                        showDialog<String>(
-                                            context: context,
-                                            builder: (BuildContext context) =>
-                                                SimpleDialog(
-                                                    title: Text(
-                                                        _personsList![index]
-                                                                .firstname +
-                                                            ' ' +
-                                                            _personsList![index]
-                                                                .lastname),
-                                                    children: popItems
-                                                        .map((e) =>
-                                                            SimpleDialogOption(
-                                                              onPressed: () {
-                                                                Navigator.of(
-                                                                        context)
-                                                                    .pop();
-                                                              },
-                                                              child: Text(e),
-                                                            ))
-                                                        .toList()));
-
-                                        // При вызове из SliverGridDelegateWithFixedCrossAxisCount
-                                        // бросает исключение
-                                        // type 'RenderSliverGrid' is not a subtype of type 'RenderBox' in type cast
-                                        //
-                                        // showPopover(
-                                        //   context: context,
-                                        //   transitionDuration:
-                                        //       const Duration(milliseconds: 150),
-                                        //   bodyBuilder: (context) =>
-                                        //       const PopoverMenu(
-                                        //     popItems: popItems,
-                                        //   ),
-                                        //   direction: PopoverDirection.top,
-                                        //   width: 200,
-                                        //   height: 400,
-                                        //   arrowHeight: 15,
-                                        //   arrowWidth: 30,
-                                        // );
-                                      },
-                                      child: PersonCard.vertical(
-                                        context: context,
-                                        firstname:
-                                            _personsList![index].firstname,
-                                        lastname: _personsList![index].lastname,
-                                        email: _personsList![index].email,
-                                        photo: _personsList![index].photo,
-                                      ),
+                                    itemBuilder: (contextGrid, index) =>
+                                        PopoverCard(
+                                      firstname: _personsList![index].firstname,
+                                      lastname: _personsList![index].lastname,
+                                      email: _personsList![index].email,
+                                      photo: _personsList![index].photo,
                                     ),
                                   ),
                                 ),
@@ -228,13 +203,52 @@ class PopoverMenu extends StatelessWidget {
                     },
                     child: Container(
                       height: 50,
-                      color: Colors.grey,
+                      color: Colors.blue[100],
                       child: Center(child: Text(e)),
                     ),
                   ))
               .toList(),
         ),
       ),
+    );
+  }
+}
+
+class PopoverCard extends StatelessWidget {
+  const PopoverCard(
+      {Key? key,
+      this.firstname = '',
+      this.lastname = '',
+      this.email = '',
+      this.photo = ''})
+      : super(key: key);
+
+  final String firstname;
+  final String lastname;
+  final String email;
+  final String photo;
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      child: PersonCard.vertical(
+        context: context,
+        firstname: firstname,
+        lastname: lastname,
+        email: email,
+        photo: photo,
+      ),
+      onTap: () {
+        showPopover(
+          context: context,
+          height: 150,
+          width: 150,
+          transitionDuration: const Duration(milliseconds: 150),
+          bodyBuilder: (context) => const PopoverMenu(
+            popItems: popItems,
+          ),
+        );
+      },
     );
   }
 }
