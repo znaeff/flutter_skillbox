@@ -1,0 +1,20 @@
+{
+  "buildFiles": [
+    "/home/znaeff/FlutterProjects/lesson_19_platform_view/android/app/CMakeLists.txt",
+    "/home/znaeff/Android/Sdk/ndk/21.1.6352462/build/cmake/android.toolchain.cmake",
+    "/home/znaeff/Android/Sdk/ndk/21.1.6352462/build/cmake/platforms.cmake"
+  ],
+  "cleanCommands": [
+    "/home/znaeff/Android/Sdk/cmake/3.10.2.4988404/bin/ninja -C \"/home/znaeff/FlutterProjects/lesson_19_platform_view/android/app/.cxx/cmake/debug/arm64-v8a\" clean"
+  ],
+  "buildTargetsCommand": "/home/znaeff/Android/Sdk/cmake/3.10.2.4988404/bin/ninja  -C \"/home/znaeff/FlutterProjects/lesson_19_platform_view/android/app/.cxx/cmake/debug/arm64-v8a\" {LIST_OF_TARGETS_TO_BUILD}",
+  "libraries": {
+    "simple-Debug-arm64-v8a": {
+      "artifactName": "simple",
+      "buildCommand": "/home/znaeff/Android/Sdk/cmake/3.10.2.4988404/bin/ninja -C \"/home/znaeff/FlutterProjects/lesson_19_platform_view/android/app/.cxx/cmake/debug/arm64-v8a\" simple",
+      "abi": "arm64-v8a",
+      "output": "/home/znaeff/FlutterProjects/lesson_19_platform_view/build/app/intermediates/cmake/debug/obj/arm64-v8a/libsimple.so",
+      "runtimeFiles": []
+    }
+  }
+}

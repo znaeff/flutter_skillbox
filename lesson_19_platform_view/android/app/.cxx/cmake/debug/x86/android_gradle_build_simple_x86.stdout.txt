@@ -1,0 +1,3 @@
+ninja: Entering directory `/home/znaeff/FlutterProjects/lesson_19_platform_view/android/app/.cxx/cmake/debug/x86'
+[1/2] Building C object CMakeFiles/simple.dir/home/znaeff/FlutterProjects/lesson_19_platform_view/src/simple.c.o
+[2/2] Linking C shared library /home/znaeff/FlutterProjects/lesson_19_platform_view/build/app/intermediates/cmake/debug/obj/x86/libsimple.so

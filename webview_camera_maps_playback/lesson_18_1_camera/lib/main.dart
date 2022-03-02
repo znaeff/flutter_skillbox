@@ -1,8 +1,5 @@
 import 'dart:async';
 import 'dart:io';
-//import 'dart:html';
-//import 'dart:ffi';
-
 import 'package:camera/camera.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
