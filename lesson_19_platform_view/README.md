@@ -1,9 +1,11 @@
 # lesson_19_platform_view
 
 For Web run this way!
+
 flutter run -d chrome --web-renderer html
 
 Because of the error
+
 "Should never encounter KeyData when transitMode is rawKeyData."
 
 See 
