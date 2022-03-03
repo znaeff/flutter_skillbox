@@ -1,0 +1,2 @@
+ninja: Entering directory `/home/znaeff/FlutterProjects/lesson_19_ffi_bridge/android/app/.cxx/cmake/debug/arm64-v8a'
+ninja: no work to do.
