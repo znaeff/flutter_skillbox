@@ -23,6 +23,13 @@ mixin _$StateObservable on _StateObservable, Store {
           Computed<List<Student>>(() => super.allStudents,
               name: '_StateObservable.allStudents'))
       .value;
+  Computed<List<Student>>? _$activeStudentsComputed;
+
+  @override
+  List<Student> get activeStudents => (_$activeStudentsComputed ??=
+          Computed<List<Student>>(() => super.activeStudents,
+              name: '_StateObservable.activeStudents'))
+      .value;
 
   final _$studentsAtom = Atom(name: '_StateObservable.students');
 
@@ -62,6 +69,14 @@ mixin _$StateObservable on _StateObservable, Store {
     return _$_initStudentsAsyncAction.run(() => super._initStudents());
   }
 
+  final _$reloadStudentsAsyncAction =
+      AsyncAction('_StateObservable.reloadStudents');
+
+  @override
+  Future<void> reloadStudents() {
+    return _$reloadStudentsAsyncAction.run(() => super.reloadStudents());
+  }
+
   final _$_StateObservableActionController =
       ActionController(name: '_StateObservable');
 
@@ -93,7 +108,8 @@ mixin _$StateObservable on _StateObservable, Store {
 students: ${students},
 activeTabIndex: ${activeTabIndex},
 isLoaded: ${isLoaded},
-allStudents: ${allStudents}
+allStudents: ${allStudents},
+activeStudents: ${activeStudents}
     ''';
   }
 }

@@ -26,8 +26,6 @@ class NetworkDataJson {
   static const String badData = 'Malformed JSON string';
   static dynamic data;
   static String error = '';
-  static const String urlPersonsJson =
-      'https://github.com/znaeff/flutter_skillbox/blob/master/lesson_20_dev_tools/assets/json/persons.json';
 
   static get(String urlPersonsJson) async {
     String datastring = await fetchFileFromNetwork(urlPersonsJson);

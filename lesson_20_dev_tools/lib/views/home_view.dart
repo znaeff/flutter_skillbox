@@ -18,47 +18,54 @@ class HomeView extends StatelessWidget {
     final state = Provider.of<StateObservable>(context);
 
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Students Mobx'),
-        // actions: [
-        //   Observer(
-        //       builder: (context) => FilterButton(
-        //             visible: state.activeTabIndex == AppTab.students.index,
-        //             activeFilter: state.activeFilter ?? Filter.all,
-        //             onSelected: state.updateFilter,
-        //           )),
-        // ],
-      ),
-      body: Observer(
-        builder: (context) => !state.isLoaded
-            ? const LoadingIndicator()
-            : state.activeTabIndex == Tabs.all.index
-                ? StudentList(
-                    students: state.allStudents,
-                    activistChanged: (student) => state.updateStudent(
-                      student.copyWith(activist: !student.activist),
+        appBar: AppBar(
+          title: const Text('Students Mobx'),
+          // actions: [
+          //   Observer(
+          //       builder: (context) => FilterButton(
+          //             visible: state.activeTabIndex == AppTab.students.index,
+          //             activeFilter: state.activeFilter ?? Filter.all,
+          //             onSelected: state.updateFilter,
+          //           )),
+          // ],
+        ),
+        body: Observer(
+          builder: (context) => !state.isLoaded
+              ? const LoadingIndicator()
+              : state.activeTabIndex == Tabs.all.index
+                  ? StudentList(
+                      students: state.allStudents,
+                      activistChanged: (student) => state.updateStudent(
+                        student.copyWith(activist: !student.activist),
+                      ),
+                    )
+                  : StudentList(
+                      students: state.activeStudents,
+                      activistChanged: (student) => state.updateStudent(
+                        student.copyWith(activist: !student.activist),
+                      ),
                     ),
-                  )
-                : StudentList(
-                    students: state.activeStudents,
-                    activistChanged: (student) => state.updateStudent(
-                      student.copyWith(activist: !student.activist),
-                    ),
-                  ),
-      ),
-      bottomNavigationBar: Observer(
+        ),
+        bottomNavigationBar: Observer(
           builder: (context) => BottomNavigationBar(
-                currentIndex: state.activeTabIndex,
-                onTap: state.updateTab,
-                items: Tabs.values.map((tab) {
-                  return BottomNavigationBarItem(
-                    icon: Icon(
-                      tab == Tabs.all ? Icons.group : Icons.list,
-                    ),
-                    label: tab == Tabs.all ? 'All' : 'Activists',
-                  );
-                }).toList(),
-              )),
-    );
+            currentIndex: state.activeTabIndex,
+            onTap: state.updateTab,
+            items: Tabs.values.map((tab) {
+              return BottomNavigationBarItem(
+                icon: Icon(
+                  tab == Tabs.all ? Icons.group : Icons.list,
+                ),
+                label: tab == Tabs.all ? 'All' : 'Activists',
+              );
+            }).toList(),
+          ),
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () async {
+            await state.reloadStudents();
+          },
+          tooltip: 'Reload',
+          child: const Icon(Icons.restart_alt),
+        ));
   }
 }

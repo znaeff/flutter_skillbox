@@ -36,6 +36,11 @@ abstract class _StateObservable with Store {
   }
 
   @action
+  Future<void> reloadStudents() async {
+    students = await _studentsRepository.loadStudents();
+  }
+
+  @action
   void updateStudent(Student student) {
     _studentsRepository.saveStudent(student);
     students = students

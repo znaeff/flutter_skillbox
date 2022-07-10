@@ -1,20 +1,21 @@
 import 'package:lesson_20_dev_tools/models/student.dart';
-import 'package:lesson_20_dev_tools/repository/asset_data_json.dart';
+import 'package:lesson_20_dev_tools/repository/network_data_json.dart';
 import 'package:lesson_20_dev_tools/repository/students_repository.dart';
 
 class NetworkStudentsRepository extends StudentsRepository {
   NetworkStudentsRepository();
 
-  static const jsonAssetName = 'json/persons.json';
+  static const String jsonNetworkUrl =
+      'https://raw.githubusercontent.com/znaeff/flutter_skillbox/b93ff3c19d30d4c89d27ee3d6ef57e38903d1373/lesson_20_dev_tools/assets/json/persons.json';
 
   @override
   Future<List<Student>> loadStudents() async {
     List<Student> _allStudents = [];
-    await AssetsDataJson.get(jsonAssetName);
+    await NetworkDataJson.get(jsonNetworkUrl);
 
-    if (AssetsDataJson.error == '') {
+    if (NetworkDataJson.error == '') {
       try {
-        _allStudents = AssetsDataJson.data
+        _allStudents = NetworkDataJson.data
             .map<Student>((e) => Student.fromJson(e))
             .toList();
       } catch (e) {
