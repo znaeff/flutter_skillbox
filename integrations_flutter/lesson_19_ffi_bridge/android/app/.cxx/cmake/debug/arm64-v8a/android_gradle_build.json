@@ -1,33 +1,33 @@
 {
   "stringTable": {
-    "0": "/home/znaeff/FlutterProjects/lesson_19_ffi_bridge/android/app/.cxx/cmake/debug/arm64-v8a",
+    "0": "/home/znaeff/FlutterSkillboxGit/flutter_skillbox/integrations_flutter/lesson_19_ffi_bridge/android/app/.cxx/cmake/debug/arm64-v8a",
     "1": "--target=aarch64-none-linux-android21 --gcc-toolchain=/home/znaeff/Android/Sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/linux-x86_64 --sysroot=/home/znaeff/Android/Sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/linux-x86_64/sysroot -Dsimple_EXPORTS -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -O0 -fno-limit-debug-info -fPIC"
   },
   "buildFiles": [
-    "/home/znaeff/FlutterProjects/lesson_19_ffi_bridge/android/app/CMakeLists.txt",
+    "/home/znaeff/FlutterSkillboxGit/flutter_skillbox/integrations_flutter/lesson_19_ffi_bridge/android/app/CMakeLists.txt",
     "/home/znaeff/Android/Sdk/ndk/21.1.6352462/build/cmake/android.toolchain.cmake",
     "/home/znaeff/Android/Sdk/ndk/21.1.6352462/build/cmake/platforms.cmake"
   ],
   "cleanCommands": [
-    "/home/znaeff/Android/Sdk/cmake/3.10.2.4988404/bin/ninja -C \"/home/znaeff/FlutterProjects/lesson_19_ffi_bridge/android/app/.cxx/cmake/debug/arm64-v8a\" clean"
+    "/home/znaeff/Android/Sdk/cmake/3.10.2.4988404/bin/ninja -C \"/home/znaeff/FlutterSkillboxGit/flutter_skillbox/integrations_flutter/lesson_19_ffi_bridge/android/app/.cxx/cmake/debug/arm64-v8a\" clean"
   ],
-  "buildTargetsCommand": "/home/znaeff/Android/Sdk/cmake/3.10.2.4988404/bin/ninja  -C \"/home/znaeff/FlutterProjects/lesson_19_ffi_bridge/android/app/.cxx/cmake/debug/arm64-v8a\" {LIST_OF_TARGETS_TO_BUILD}",
+  "buildTargetsCommand": "/home/znaeff/Android/Sdk/cmake/3.10.2.4988404/bin/ninja  -C \"/home/znaeff/FlutterSkillboxGit/flutter_skillbox/integrations_flutter/lesson_19_ffi_bridge/android/app/.cxx/cmake/debug/arm64-v8a\" {LIST_OF_TARGETS_TO_BUILD}",
   "libraries": {
     "simple-Debug-arm64-v8a": {
-      "buildCommand": "/home/znaeff/Android/Sdk/cmake/3.10.2.4988404/bin/ninja -C \"/home/znaeff/FlutterProjects/lesson_19_ffi_bridge/android/app/.cxx/cmake/debug/arm64-v8a\" simple",
+      "buildCommand": "/home/znaeff/Android/Sdk/cmake/3.10.2.4988404/bin/ninja -C \"/home/znaeff/FlutterSkillboxGit/flutter_skillbox/integrations_flutter/lesson_19_ffi_bridge/android/app/.cxx/cmake/debug/arm64-v8a\" simple",
       "buildType": "debug",
       "toolchain": "1752681723",
       "abi": "arm64-v8a",
       "artifactName": "simple",
       "files": [
         {
-          "src": "/home/znaeff/FlutterProjects/lesson_19_ffi_bridge/src/simple.c",
+          "src": "/home/znaeff/FlutterSkillboxGit/flutter_skillbox/integrations_flutter/lesson_19_ffi_bridge/src/simple.c",
           "flagsOrdinal": 1,
           "workingDirectoryOrdinal": 0
         }
       ],
       "headers": [],
-      "output": "/home/znaeff/FlutterProjects/lesson_19_ffi_bridge/build/app/intermediates/cmake/debug/obj/arm64-v8a/libsimple.so",
+      "output": "/home/znaeff/FlutterSkillboxGit/flutter_skillbox/integrations_flutter/lesson_19_ffi_bridge/build/app/intermediates/cmake/debug/obj/arm64-v8a/libsimple.so",
       "runtimeFiles": []
     }
   },

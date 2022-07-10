@@ -1,2 +1,8 @@
-ninja: Entering directory `/home/znaeff/FlutterProjects/lesson_19_ffi_bridge/android/app/.cxx/cmake/debug/x86_64'
-ninja: no work to do.
+ninja: Entering directory `/home/znaeff/FlutterSkillboxGit/flutter_skillbox/integrations_flutter/lesson_19_ffi_bridge/android/app/.cxx/cmake/debug/x86_64'
+[1/2] Building C object CMakeFiles/simple.dir/home/znaeff/FlutterSkillboxGit/flutter_skillbox/integrations_flutter/lesson_19_ffi_bridge/src/simple.c.o
+/home/znaeff/FlutterSkillboxGit/flutter_skillbox/integrations_flutter/lesson_19_ffi_bridge/src/simple.c:3:12: warning: implicitly declaring library function 'strlen' with type 'unsigned long (const char *)' [-Wimplicit-function-declaration]
+    return strlen(str);
+           ^
+/home/znaeff/FlutterSkillboxGit/flutter_skillbox/integrations_flutter/lesson_19_ffi_bridge/src/simple.c:3:12: note: include the header <string.h> or explicitly provide a declaration for 'strlen'
+1 warning generated.
+[2/2] Linking C shared library /home/znaeff/FlutterSkillboxGit/flutter_skillbox/integrations_flutter/lesson_19_ffi_bridge/build/app/intermediates/cmake/debug/obj/x86_64/libsimple.so

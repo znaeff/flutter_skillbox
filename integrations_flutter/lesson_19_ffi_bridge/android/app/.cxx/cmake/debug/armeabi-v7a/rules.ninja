@@ -42,7 +42,7 @@ rule C_SHARED_LIBRARY_LINKER__simple
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /home/znaeff/Android/Sdk/cmake/3.10.2.4988404/bin/cmake -H/home/znaeff/FlutterProjects/lesson_19_ffi_bridge/android/app -B/home/znaeff/FlutterProjects/lesson_19_ffi_bridge/android/app/.cxx/cmake/debug/armeabi-v7a
+  command = /home/znaeff/Android/Sdk/cmake/3.10.2.4988404/bin/cmake -H/home/znaeff/FlutterSkillboxGit/flutter_skillbox/integrations_flutter/lesson_19_ffi_bridge/android/app -B/home/znaeff/FlutterSkillboxGit/flutter_skillbox/integrations_flutter/lesson_19_ffi_bridge/android/app/.cxx/cmake/debug/armeabi-v7a
   description = Re-running CMake...
   generator = 1
 

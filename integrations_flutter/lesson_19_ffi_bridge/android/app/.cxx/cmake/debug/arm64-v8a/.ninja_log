@@ -1,7 +1,3 @@
 # ninja log v5
-0	21	1645966730	CMakeFiles/simple.dir/home/znaeff/FlutterProjects/lesson_19_ffi_bridge/src/simple.c.o	1fc596c0b3336253
-21	36	1645966730	/home/znaeff/FlutterProjects/lesson_19_ffi_bridge/build/app/intermediates/cmake/debug/obj/arm64-v8a/libsimple.so	27618857bad48008
-1	28	1646294331	CMakeFiles/simple.dir/home/znaeff/FlutterProjects/lesson_19_ffi_bridge/src/simple.c.o	1fc596c0b3336253
-28	63	1646294331	/home/znaeff/FlutterProjects/lesson_19_ffi_bridge/build/app/intermediates/cmake/debug/obj/arm64-v8a/libsimple.so	27618857bad48008
-1	21	1646295391	CMakeFiles/simple.dir/home/znaeff/FlutterProjects/lesson_19_ffi_bridge/src/simple.c.o	1fc596c0b3336253
-21	51	1646295391	/home/znaeff/FlutterProjects/lesson_19_ffi_bridge/build/app/intermediates/cmake/debug/obj/arm64-v8a/libsimple.so	27618857bad48008
+0	24	1646296951	CMakeFiles/simple.dir/home/znaeff/FlutterSkillboxGit/flutter_skillbox/integrations_flutter/lesson_19_ffi_bridge/src/simple.c.o	ebf1fb4f92bcf98f
+25	42	1646296952	/home/znaeff/FlutterSkillboxGit/flutter_skillbox/integrations_flutter/lesson_19_ffi_bridge/build/app/intermediates/cmake/debug/obj/arm64-v8a/libsimple.so	b51a60e652b15160

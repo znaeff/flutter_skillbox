@@ -1,0 +1,1 @@
+enum Tabs { all, activists }

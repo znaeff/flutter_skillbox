@@ -1,7 +1,7 @@
 Executable : /home/znaeff/Android/Sdk/cmake/3.10.2.4988404/bin/ninja
 arguments : 
 -C
-/home/znaeff/FlutterProjects/lesson_19_ffi_bridge/android/app/.cxx/cmake/debug/x86
+/home/znaeff/FlutterSkillboxGit/flutter_skillbox/integrations_flutter/lesson_19_ffi_bridge/android/app/.cxx/cmake/debug/x86
 simple
 jvmArgs : 
 

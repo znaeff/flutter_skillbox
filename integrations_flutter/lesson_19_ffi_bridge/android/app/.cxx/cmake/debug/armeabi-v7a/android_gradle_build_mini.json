@@ -1,19 +1,19 @@
 {
   "buildFiles": [
-    "/home/znaeff/FlutterProjects/lesson_19_ffi_bridge/android/app/CMakeLists.txt",
+    "/home/znaeff/FlutterSkillboxGit/flutter_skillbox/integrations_flutter/lesson_19_ffi_bridge/android/app/CMakeLists.txt",
     "/home/znaeff/Android/Sdk/ndk/21.1.6352462/build/cmake/android.toolchain.cmake",
     "/home/znaeff/Android/Sdk/ndk/21.1.6352462/build/cmake/platforms.cmake"
   ],
   "cleanCommands": [
-    "/home/znaeff/Android/Sdk/cmake/3.10.2.4988404/bin/ninja -C \"/home/znaeff/FlutterProjects/lesson_19_ffi_bridge/android/app/.cxx/cmake/debug/armeabi-v7a\" clean"
+    "/home/znaeff/Android/Sdk/cmake/3.10.2.4988404/bin/ninja -C \"/home/znaeff/FlutterSkillboxGit/flutter_skillbox/integrations_flutter/lesson_19_ffi_bridge/android/app/.cxx/cmake/debug/armeabi-v7a\" clean"
   ],
-  "buildTargetsCommand": "/home/znaeff/Android/Sdk/cmake/3.10.2.4988404/bin/ninja  -C \"/home/znaeff/FlutterProjects/lesson_19_ffi_bridge/android/app/.cxx/cmake/debug/armeabi-v7a\" {LIST_OF_TARGETS_TO_BUILD}",
+  "buildTargetsCommand": "/home/znaeff/Android/Sdk/cmake/3.10.2.4988404/bin/ninja  -C \"/home/znaeff/FlutterSkillboxGit/flutter_skillbox/integrations_flutter/lesson_19_ffi_bridge/android/app/.cxx/cmake/debug/armeabi-v7a\" {LIST_OF_TARGETS_TO_BUILD}",
   "libraries": {
     "simple-Debug-armeabi-v7a": {
       "artifactName": "simple",
-      "buildCommand": "/home/znaeff/Android/Sdk/cmake/3.10.2.4988404/bin/ninja -C \"/home/znaeff/FlutterProjects/lesson_19_ffi_bridge/android/app/.cxx/cmake/debug/armeabi-v7a\" simple",
+      "buildCommand": "/home/znaeff/Android/Sdk/cmake/3.10.2.4988404/bin/ninja -C \"/home/znaeff/FlutterSkillboxGit/flutter_skillbox/integrations_flutter/lesson_19_ffi_bridge/android/app/.cxx/cmake/debug/armeabi-v7a\" simple",
       "abi": "armeabi-v7a",
-      "output": "/home/znaeff/FlutterProjects/lesson_19_ffi_bridge/build/app/intermediates/cmake/debug/obj/armeabi-v7a/libsimple.so",
+      "output": "/home/znaeff/FlutterSkillboxGit/flutter_skillbox/integrations_flutter/lesson_19_ffi_bridge/build/app/intermediates/cmake/debug/obj/armeabi-v7a/libsimple.so",
       "runtimeFiles": []
     }
   }

@@ -1,0 +1,69 @@
+[
+  {
+    "id": 1,
+    "name": "Alex",
+    "activist": true,
+    "middle": 2.2,
+    "photo": "male-300x300.png"
+  },
+  {
+    "id": 2,
+    "name": "Viktor",
+    "activist": false,
+    "middle": 4.2
+  },
+  {
+    "id": 3,
+    "name": "Fiona",
+    "activist": true,
+    "photo": "female-300x300.png"
+  },
+  {
+    "id": 4,
+    "activist": true,
+    "middle": 3.0,
+    "photo": "male-300x300.png"
+  },
+  {
+    "id": 5,
+    "name": "Anna",
+    "activist": false,
+    "middle": 5.0,
+    "photo": "female-300x300.png"
+  },
+  {
+    "id": 6,
+    "name": "Peter",
+    "activist": false,
+    "middle": 1.2,
+    "photo": "male-300x300.png"
+  },
+  {
+    "id": 7,
+    "name": "Venera",
+    "activist": true,
+    "middle": 4.2,
+    "photo": "female-300x300.png"
+  },
+  {
+    "id": 8,
+    "name": "Elena",
+    "activist": true,
+    "middle": 3.4,
+    "photo": "female-300x300.png"
+  },
+  {
+    "id": 9,
+    "name": "Vladimir",
+    "activist": false,
+    "middle": 5.0,
+    "photo": "male-300x300.png"
+  },
+  {
+    "id": 10,
+    "name": "Viktoria",
+    "activist": false,
+    "middle": 4.1,
+    "photo": "female-300x300.png"
+  }
+]

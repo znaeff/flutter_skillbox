@@ -34,7 +34,7 @@ include rules.ninja
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/znaeff/FlutterProjects/lesson_19_ffi_bridge/android/app/.cxx/cmake/debug/arm64-v8a && /home/znaeff/Android/Sdk/cmake/3.10.2.4988404/bin/cmake -H/home/znaeff/FlutterProjects/lesson_19_ffi_bridge/android/app -B/home/znaeff/FlutterProjects/lesson_19_ffi_bridge/android/app/.cxx/cmake/debug/arm64-v8a
+  COMMAND = cd /home/znaeff/FlutterSkillboxGit/flutter_skillbox/integrations_flutter/lesson_19_ffi_bridge/android/app/.cxx/cmake/debug/arm64-v8a && /home/znaeff/Android/Sdk/cmake/3.10.2.4988404/bin/cmake -H/home/znaeff/FlutterSkillboxGit/flutter_skillbox/integrations_flutter/lesson_19_ffi_bridge/android/app -B/home/znaeff/FlutterSkillboxGit/flutter_skillbox/integrations_flutter/lesson_19_ffi_bridge/android/app/.cxx/cmake/debug/arm64-v8a
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -44,7 +44,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/znaeff/FlutterProjects/lesson_19_ffi_bridge/android/app/.cxx/cmake/debug/arm64-v8a && /home/znaeff/Android/Sdk/cmake/3.10.2.4988404/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd /home/znaeff/FlutterSkillboxGit/flutter_skillbox/integrations_flutter/lesson_19_ffi_bridge/android/app/.cxx/cmake/debug/arm64-v8a && /home/znaeff/Android/Sdk/cmake/3.10.2.4988404/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 build edit_cache: phony CMakeFiles/edit_cache.util
@@ -56,21 +56,21 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Order-only phony target for simple
 
 build cmake_object_order_depends_target_simple: phony
-build CMakeFiles/simple.dir/home/znaeff/FlutterProjects/lesson_19_ffi_bridge/src/simple.c.o: C_COMPILER__simple /home/znaeff/FlutterProjects/lesson_19_ffi_bridge/src/simple.c || cmake_object_order_depends_target_simple
+build CMakeFiles/simple.dir/home/znaeff/FlutterSkillboxGit/flutter_skillbox/integrations_flutter/lesson_19_ffi_bridge/src/simple.c.o: C_COMPILER__simple /home/znaeff/FlutterSkillboxGit/flutter_skillbox/integrations_flutter/lesson_19_ffi_bridge/src/simple.c || cmake_object_order_depends_target_simple
   DEFINES = -Dsimple_EXPORTS
-  DEP_FILE = CMakeFiles/simple.dir/home/znaeff/FlutterProjects/lesson_19_ffi_bridge/src/simple.c.o.d
+  DEP_FILE = CMakeFiles/simple.dir/home/znaeff/FlutterSkillboxGit/flutter_skillbox/integrations_flutter/lesson_19_ffi_bridge/src/simple.c.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC
   OBJECT_DIR = CMakeFiles/simple.dir
-  OBJECT_FILE_DIR = CMakeFiles/simple.dir/home/znaeff/FlutterProjects/lesson_19_ffi_bridge/src
+  OBJECT_FILE_DIR = CMakeFiles/simple.dir/home/znaeff/FlutterSkillboxGit/flutter_skillbox/integrations_flutter/lesson_19_ffi_bridge/src
 
 # =============================================================================
 # Link build statements for SHARED_LIBRARY target simple
 
 
 #############################################
-# Link the shared library /home/znaeff/FlutterProjects/lesson_19_ffi_bridge/build/app/intermediates/cmake/debug/obj/arm64-v8a/libsimple.so
+# Link the shared library /home/znaeff/FlutterSkillboxGit/flutter_skillbox/integrations_flutter/lesson_19_ffi_bridge/build/app/intermediates/cmake/debug/obj/arm64-v8a/libsimple.so
 
-build /home/znaeff/FlutterProjects/lesson_19_ffi_bridge/build/app/intermediates/cmake/debug/obj/arm64-v8a/libsimple.so: C_SHARED_LIBRARY_LINKER__simple CMakeFiles/simple.dir/home/znaeff/FlutterProjects/lesson_19_ffi_bridge/src/simple.c.o
+build /home/znaeff/FlutterSkillboxGit/flutter_skillbox/integrations_flutter/lesson_19_ffi_bridge/build/app/intermediates/cmake/debug/obj/arm64-v8a/libsimple.so: C_SHARED_LIBRARY_LINKER__simple CMakeFiles/simple.dir/home/znaeff/FlutterSkillboxGit/flutter_skillbox/integrations_flutter/lesson_19_ffi_bridge/src/simple.c.o
   LANGUAGE_COMPILE_FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O0 -fno-limit-debug-info
   LINK_FLAGS = -Wl,--exclude-libs,libgcc.a -Wl,--exclude-libs,libgcc_real.a -Wl,--exclude-libs,libatomic.a -static-libstdc++ -Wl,--build-id -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments
   LINK_LIBRARIES = -latomic -lm
@@ -79,13 +79,13 @@ build /home/znaeff/FlutterProjects/lesson_19_ffi_bridge/build/app/intermediates/
   PRE_LINK = :
   SONAME = libsimple.so
   SONAME_FLAG = -Wl,-soname,
-  TARGET_FILE = /home/znaeff/FlutterProjects/lesson_19_ffi_bridge/build/app/intermediates/cmake/debug/obj/arm64-v8a/libsimple.so
+  TARGET_FILE = /home/znaeff/FlutterSkillboxGit/flutter_skillbox/integrations_flutter/lesson_19_ffi_bridge/build/app/intermediates/cmake/debug/obj/arm64-v8a/libsimple.so
   TARGET_PDB = simple.so.dbg
 # =============================================================================
 # Target aliases.
 
-build libsimple.so: phony /home/znaeff/FlutterProjects/lesson_19_ffi_bridge/build/app/intermediates/cmake/debug/obj/arm64-v8a/libsimple.so
-build simple: phony /home/znaeff/FlutterProjects/lesson_19_ffi_bridge/build/app/intermediates/cmake/debug/obj/arm64-v8a/libsimple.so
+build libsimple.so: phony /home/znaeff/FlutterSkillboxGit/flutter_skillbox/integrations_flutter/lesson_19_ffi_bridge/build/app/intermediates/cmake/debug/obj/arm64-v8a/libsimple.so
+build simple: phony /home/znaeff/FlutterSkillboxGit/flutter_skillbox/integrations_flutter/lesson_19_ffi_bridge/build/app/intermediates/cmake/debug/obj/arm64-v8a/libsimple.so
 # =============================================================================
 # Folder targets.
 
@@ -97,7 +97,7 @@ build simple: phony /home/znaeff/FlutterProjects/lesson_19_ffi_bridge/build/app/
 #############################################
 # The main all target.
 
-build all: phony /home/znaeff/FlutterProjects/lesson_19_ffi_bridge/build/app/intermediates/cmake/debug/obj/arm64-v8a/libsimple.so
+build all: phony /home/znaeff/FlutterSkillboxGit/flutter_skillbox/integrations_flutter/lesson_19_ffi_bridge/build/app/intermediates/cmake/debug/obj/arm64-v8a/libsimple.so
 
 #############################################
 # Make the all target the default.
