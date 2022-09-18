@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lesson_21_hive_boxes/data/hive_storage.dart';
 import 'package:lesson_21_hive_boxes/widgets/category_list_page.dart';
+import 'package:lesson_21_hive_boxes/widgets/record_item_page.dart';
 import 'package:lesson_21_hive_boxes/widgets/record_list_page.dart';
 
 Future<void> main() async {
@@ -27,6 +28,14 @@ class MyApp extends StatelessWidget {
               return RecordListPage(
                 catId: args['cat_id'],
                 title: args['cat_title'],
+              );
+            });
+          case RecordItemPage.routeName:
+            final args = settings.arguments as Map<String, dynamic>;
+            return MaterialPageRoute(builder: (BuildContext context) {
+              return RecordItemPage(
+                title: args['cat_title'],
+                record: args['record'],
               );
             });
           default:
